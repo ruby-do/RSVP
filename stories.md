@@ -1,28 +1,36 @@
-#RSVP
+#Ruby DO
+
+2016/02/24
+
+##RSVP
 
 This is an app to handle RSVP for an events. Eventually it will handle multiple events but for now the use case will be limited to an event happening next week.
 
 
-## Contribuitors:
+### Contribuitors:
 
-- Alvin
-- Jose Miguel
-- Carlos Antonio
-- Victor
-- Oliver
-- Marcos
-- Josue
-- Jorge
-- Socrates
+  - Alvin
+  - Jose Miguel
+  - Carlos Antonio
+  - Victor
+  - Oliver
+  - Marcos
+  - Josue
+  - Jorge
+  - Socrates
+  - Ernesto
+  - Caleb
+
 
 ### A user registers for an event
 
 As a user I want to be able to register for an event
 
-#### Acceptance Criteria:
- - A registration has: [ `email`, `phone number`, `first name`, `last name` ]
- - An event has: [`name`, `description`, `datetime`, `seats_limit`]
- - Only a user per email can be registered.
+~#### Acceptance Criteria:~
+ ~- The user can register for the event.~
+ ~- A registration has: [ `email`, `phone number`, `first name`, `last name` ]~
+ ~- An event has: [`name`, `description`, `datetime`, `seats_limit`]~
+ ~- Only a user per email can be registered.~
 
 ##############################################
 

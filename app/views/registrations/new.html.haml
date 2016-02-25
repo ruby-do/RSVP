@@ -1,0 +1,10 @@
+%h1=@event.name
+%h4=@event.description
+
+= form_for(@registration) do |f|
+  = f.text_field :email, placeholder: "Email"
+  = f.text_field :first_name, placeholder: "First Name"
+  = f.text_field :last_name, placeholder: "Last Name"
+  = f.text_field :phone_number, placeholder: "Phone Number"
+
+  = f.submit
