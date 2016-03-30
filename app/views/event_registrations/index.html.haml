@@ -1,0 +1,12 @@
+%table.table
+  %thead
+    %tr
+      %th Full Name
+      %th Email
+      %th Registration Date
+  %tbody
+  - @registrations.each do |registration|
+    %tr
+      %td= registration.full_name
+      %td= registration.email
+      %td= registration.registration_date

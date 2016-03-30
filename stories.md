@@ -1,6 +1,7 @@
 #Ruby DO
 
-2016/02/24
+2016/02/24 - Enter rails
+2016/03/29 - Shall we?
 
 ##RSVP
 
@@ -9,41 +10,57 @@ This is an app to handle RSVP for an events. Eventually it will handle multiple 
 
 ### Contribuitors:
 
-  - Alvin
-  - Jose Miguel
-  - Carlos Antonio
-  - Victor
-  - Oliver
-  - Marcos
-  - Josue
-  - Jorge
-  - Socrates
-  - Ernesto
-  - Caleb
+  - Alvin [**]
+  - Jose Miguel [**]
+  - Carlos Antonio [**]
+  - Victor [*]
+  - Oliver [**]
+  - Marcos [**]
+  - Josue [**]
+  - Jorge [**]
+  - Socrates [**]
+  - Ernesto [**]
+  - Caleb [*]
+  - René [-*]
+  - Carlos Rosario [-*]
+  - Enmanuel Toribio [-*]
+  - Bryan [-*]
+  - José Luis [-*]
 
-
-### A user registers for an event
+~~### A user registers for an event~~
 
 As a user I want to be able to register for an event
 
-~#### Acceptance Criteria:~
- ~- The user can register for the event.~
- ~- A registration has: [ `email`, `phone number`, `first name`, `last name` ]~
- ~- An event has: [`name`, `description`, `datetime`, `seats_limit`]~
- ~- Only a user per email can be registered.~
+#### Acceptance Criteria:
+ - The user can register for the event.
+ - A registration has: [ `email`, `phone number`, `first name`, `last name` ]
+ - An event has: [`name`, `description`, `datetime`, `seats_limit`]
+ - Only a user per email can be registered.
 
 ##############################################
 
 
-### An admin sees the registrations for an event
+~~### An admin sees the registrations for an event~~
 
 As an admin user I want to be able to see the registrations for a particular event
 
 Acceptance Criteria:
  - The registrations are listed in ascending order by the time they were created at
+ - Only the admin can see the list
 
 ##############################################
 
+~~### An admin sees the pretty registrations for an event
+
+As an admin user I want to be able to see the registrations for a particular event.
+
+Acceptance Criteria:
+
+I should see the following for a given registration:
+- First Name + Last Name (Capitalized)
+- The email should appear
+- Registration Date separed by slashes (MM/DD/YYYY)
+- The fields appear in that specific order
 
 ### The registrations can be filtered
 
