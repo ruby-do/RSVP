@@ -14,12 +14,12 @@
 #
 development:
   adapter:  postgresql
-  host:     localhost
+  host: <%= ENV['RSVPDB_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['RSVPDB_1_PORT_5432_TCP_PORT'] %>
   encoding: unicode
   database: rsvp_development
   pool:     5
-  username: Jorge
-  password: 
+  username: postgres
   template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -47,7 +47,7 @@ test:
   database: rsvp_test
   pool:     5
   username: Jorge
-  password: 
+  password:
   template: template0
 
 production:
@@ -57,5 +57,5 @@ production:
   database: rsvp_production
   pool:     5
   username: Jorge
-  password: 
+  password:
   template: template0
