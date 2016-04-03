@@ -26,6 +26,21 @@ This application requires:
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
+Running the project using Docker
+--------------------------------
+
+You must have [Docker](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your system. After installing these tools, you can run the project from the terminal by navigating to the project directory and executing the following commands:
+
+* `docker-compose build`
+* `docker-compose up`
+
+Open a new terminal and run these two:
+
+* `docker-compose run rsvpapp bundle exec rake db:create`
+* `docker-compose run rsvpapp bundle exec rake db:migrate`
+
+After your project is set up, you only need to execute `docker-compose up` the next time you want to run it again.
+
 Getting Started
 ---------------
 
