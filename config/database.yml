@@ -12,15 +12,15 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
+development: &default
   adapter:  postgresql
-  host: <%= ENV['RSVPDB_1_PORT_5432_TCP_ADDR'] %>
-  port: <%= ENV['RSVPDB_1_PORT_5432_TCP_PORT'] %>
   encoding: unicode
+  pool: 5
   database: rsvp_development
-  pool:     5
-  username: postgres
-  template: template0
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
+  port: <%= ENV['DB_PORT'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,14 +41,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
+  <<: *default
   database: rsvp_test
-  pool:     5
-  username: Jorge
-  password:
-  template: template0
 
 production:
   adapter:  postgresql
