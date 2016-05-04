@@ -7,6 +7,11 @@ rsvpapp:
     - "3000:3000"
   links:
     - rsvpdb
+  environment:
+    DB_HOST: rsvpdb
+    DB_PORT: 5432
+    DB_USERNAME: postgres
+    DB_PASSWORD:
 rsvpdb:
   image: postgres:9.4
   ports:
