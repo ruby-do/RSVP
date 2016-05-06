@@ -10,24 +10,25 @@ This is an app to handle RSVP for an events. Eventually it will handle multiple 
 
 ### Contribuitors:
 
-  - Alvin [**]
+  - Alvin [***]
   - Jose Miguel [**]
-  - Carlos Antonio [**]
-  - Victor [*]
-  - Oliver [**]
+  - Carlos Antonio [***]
+  - Victor [*-*]
+  - Oliver [***]
   - Marcos [**]
   - Josue [**]
-  - Jorge [**]
+  - Jorge [***]
   - Socrates [**]
   - Ernesto [**]
   - Caleb [*]
-  - René [-*]
-  - Carlos Rosario [-*]
+  - René [-**]
+  - Carlos Rosario [-**]
   - Enmanuel Toribio [-*]
-  - Bryan [-*]
+  - Bryan [-**]
   - José Luis [-*]
+  - Emmanuel Crisostomo [--*]
 
-~~### A user registers for an event~~
+### ~~A user registers for an event~~
 
 As a user I want to be able to register for an event
 
@@ -40,7 +41,7 @@ As a user I want to be able to register for an event
 ##############################################
 
 
-~~### An admin sees the registrations for an event~~
+### ~~An admin sees the registrations for an event~~
 
 As an admin user I want to be able to see the registrations for a particular event
 
@@ -50,7 +51,7 @@ Acceptance Criteria:
 
 ##############################################
 
-~~### An admin sees the pretty registrations for an event
+### ~~An admin sees the pretty registrations for an event~~
 
 As an admin user I want to be able to see the registrations for a particular event.
 
@@ -85,6 +86,14 @@ As an admin I want to be able to edit a registration
 
 ##########################################
 
+### ~~A user can register to multiple events~~
+
+As a user I want to be able to register to multiple events.
+
+#### Acceptance Criteria:
+ - The user can subscribe to various events
+
+##############################################
 
 ### A user is registered for multiple events
 

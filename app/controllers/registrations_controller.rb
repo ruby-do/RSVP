@@ -1,15 +1,27 @@
 class RegistrationsController < ApplicationController
 
-  def new
-    @registration = Registration.new
-    @event = Event.first
-  end
-
   def create
-    if Event.first.seat_limit > Registration.count
-      if Registration.where(email:params[:registration][:email]).count < 1
-        new_registration = Registration.create(params.require(:registration).permit(:email, :first_name, :last_name, :phone_number))
+    seats_available = Event.find(event_id).seat_limit > Registration.where(event_id: event_id).count
+    if seats_available
+      @new_registration = Registration.new(registration_params)
+
+      unless @new_registration.save
+        flash.now[:error] = @new_registration.errors.full_messages.join(' ')
       end
     end
+
   end
+
+  private
+
+  def event_id
+    params[:event_id]
+  end
+
+  def registration_params
+    params.require(:registration)
+      .permit(:email, :first_name, :last_name, :phone_number)
+      .merge({ event_id: event_id })
+  end
+
 end

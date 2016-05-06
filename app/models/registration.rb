@@ -1,4 +1,20 @@
 class Registration < ActiveRecord::Base
-  # enum events: [:ruby_do, :javascript_do]
-  #validates_uniqueness_of :email
+  class RegistrationEmailValidator < ActiveModel::Validator
+    def validate(registration)
+      if already_registered?(registration)
+        registration.errors['email'] << "is already registered to this event"
+      end
+    end
+
+    def already_registered?(registration)
+      Registration.where(email: registration.email, event_id: registration.event_id).count > 0
+    end
+  end
+
+  validates :phone_number, format: { with: /[0-9]{10}/ }, allow_blank: true
+  validates :email, presence: true, format: { with: /[\w.-]+@[a-zA-Z]+\.[a-zA-Z]+/ }
+  validates_with RegistrationEmailValidator
+
+  validates_presence_of :first_name, :last_name
+
 end
