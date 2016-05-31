@@ -1,7 +1,7 @@
 %h1=@event.name
 %h4=@event.description
 
-= form_for(@registration) do |f|
+= form_for(@registration, url: event_registrations_path(@event)) do |f|
   = f.text_field :email, placeholder: "Email"
   = f.text_field :first_name, placeholder: "First Name"
   = f.text_field :last_name, placeholder: "Last Name"
