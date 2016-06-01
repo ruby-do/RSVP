@@ -2,6 +2,7 @@ class RegistrationsController < ApplicationController
 
   def create
     seats_available = Event.find(event_id).seat_limit > Registration.where(event_id: event_id).count
+
     if seats_available
       @new_registration = Registration.new(registration_params)
 
@@ -9,7 +10,6 @@ class RegistrationsController < ApplicationController
         flash.now[:error] = @new_registration.errors.full_messages.join(' ')
       end
     end
-
   end
 
   private
