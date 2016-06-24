@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :registration do
-    email "MyString"
-    phone_number "MyString"
-    first_name "MyString"
-    last_name "MyString"
+    sequence(:email) { |n| "josh#{n}@josh.com" }
+    phone_number "8097635455"
+    first_name "Josue"
+    last_name "Abreu"
+    event
   end
 end

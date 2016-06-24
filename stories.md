@@ -10,23 +10,27 @@ This is an app to handle RSVP for an events. Eventually it will handle multiple 
 
 ### Contribuitors:
 
-  - Alvin [***]
-  - Jose Miguel [**]
-  - Carlos Antonio [***]
-  - Victor [*-*]
-  - Oliver [***]
-  - Marcos [**]
-  - Josue [**]
-  - Jorge [***]
-  - Socrates [**]
-  - Ernesto [**]
-  - Caleb [*]
+  - Alvin [****]
+  - Jose Miguel [***]
+  - Carlos Antonio [****]
+  - Victor [*-**]
+  - Oliver [****]
+  - Marcos [***]
+  - Josue [***]
+  - Jorge [****]
+  - Socrates [***]
+  - Ernesto [***]
+  - Caleb [**]
   - René [-**]
-  - Carlos Rosario [-**]
+  - Carlos Rosario [-***]
   - Enmanuel Toribio [-*]
   - Bryan [-**]
   - José Luis [-*]
   - Emmanuel Crisostomo [--*]
+  - Irving Rivas (iajrz)
+  - Julissa Dantes
+  - Crismar Mejía 
+  - Libranner Santos
 
 ### ~~A user registers for an event~~
 
@@ -62,6 +66,26 @@ I should see the following for a given registration:
 - The email should appear
 - Registration Date separed by slashes (MM/DD/YYYY)
 - The fields appear in that specific order
+
+### ~~Addings tests to the application~~
+
+- Add a DRY run test to verify the integrity of the application
+- Add a controller level integration test to create an event
+- Add a controller level integration test to view events by the administrator
+
+
+### Redirects to the Home Page after registering to an event
+
+As a visitor that just registered for a particular event
+In order to know that I registered successfuly
+I want to be redirected to the Home Page with a success message
+
+
+### No seats for the event
+
+As a visitor trying to register for a particular event with no seats available
+In order to know that my registration was not successful
+I want to see an error message 
 
 ### The registrations can be filtered
 
