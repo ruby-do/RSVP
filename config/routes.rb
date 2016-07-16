@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :event_registrations, only: [:index]
+  resources :users, only: [:show]
+  resources :sessions, only: [:new, :create]
 
 end
