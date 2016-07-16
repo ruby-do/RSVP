@@ -4,6 +4,6 @@ FactoryGirl.define do
     # phone_number "8097635455"
     # first_name "Josue"
     # last_name "Abreu"
-    # event
+    event
   end
 end

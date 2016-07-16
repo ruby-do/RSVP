@@ -4,8 +4,9 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: email)
     if user.authenticate(password)
+      sign_in(user)
       flash[:notice] = 'Welcome back!'
-      redirect_to root_path
+      redirect_back_or root_path
     else
       flash[:error] = 'Wrong email or password!'
       render :new
@@ -25,4 +26,5 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:email, :password)
   end
+
 end

@@ -12,6 +12,7 @@ class Registration < ActiveRecord::Base
   end
 
   belongs_to :user
+  belongs_to :event
 
   # validates :phone_number, format: { with: /[0-9]{10}/ }, allow_blank: true
   # validates :email, presence: true, format: { with: /[\w.-]+@[a-zA-Z]+\.[a-zA-Z]+/ }
