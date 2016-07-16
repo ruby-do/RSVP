@@ -11,10 +11,13 @@ class Registration < ActiveRecord::Base
     end
   end
 
-  validates :phone_number, format: { with: /[0-9]{10}/ }, allow_blank: true
-  validates :email, presence: true, format: { with: /[\w.-]+@[a-zA-Z]+\.[a-zA-Z]+/ }
-  validates_with RegistrationEmailValidator
+  belongs_to :user
+  belongs_to :event
 
-  validates_presence_of :first_name, :last_name
+  # validates :phone_number, format: { with: /[0-9]{10}/ }, allow_blank: true
+  # validates :email, presence: true, format: { with: /[\w.-]+@[a-zA-Z]+\.[a-zA-Z]+/ }
+  # validates_with RegistrationEmailValidator
+
+  # validates_presence_of :first_name, :last_name
 
 end
